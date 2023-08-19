@@ -9,6 +9,7 @@ npm install gh-pages --save-dev
 npm pkg set scripts.predeploy="npm run build"
 # npm pkg set scripts.deploy="gh-pages -d dist"
 # https://stackoverflow.com/questions/63964575/fatal-a-branch-named-gh-pages-already-exists
+# ssh-add ~/.ssh/id_rsa # https://stackoverflow.com/questions/21095054/ssh-key-still-asking-for-password-and-passphrase
 npm pkg set scripts.deploy="rm -rf node_modules/.cache/gh-pages && gh-pages -d dist"
 
 ########################################################################
