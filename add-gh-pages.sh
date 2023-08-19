@@ -7,7 +7,8 @@ npm install gh-pages --save-dev
 # npm set-script predeploy "npm run build" # npm set-script command requires at least npm v7.x
 # npm set-script deploy "gh-pages -d dist" # npm set-script command requires at least npm v7.x
 npm pkg set scripts.predeploy="npm run build"
-# npm pkg set scripts.deploy="gh-pages -d dist" 
+# npm pkg set scripts.deploy="gh-pages -d dist"
+# https://stackoverflow.com/questions/63964575/fatal-a-branch-named-gh-pages-already-exists
 npm pkg set scripts.deploy="rm -rf node_modules/.cache/gh-pages && gh-pages -d dist"
 
 ########################################################################
